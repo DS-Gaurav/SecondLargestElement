@@ -1,0 +1,21 @@
+int print2largest(int arr[], int n) {
+	    // code here
+	   int r=-1,lar=0;
+	   for(int i=1;i<n;i++)
+	   {
+	       if(arr[i]>arr[lar])
+	       {
+	           r=lar;
+	           lar=i;
+	       }
+	       else if(arr[i]!=arr[lar])
+	       {
+	           if(r==-1 || arr[r]<arr[i])
+	           r=i;
+	       }
+	   }
+	   if(r>=0)
+	   return arr[r];
+	   else
+	   return -1;
+	}
